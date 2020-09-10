@@ -12,10 +12,14 @@ function buttonClick(value) {
     } else {
         handleNumber(value);
     }
+    screen.innerText = buffer;
 }
 
 function handleSymbol(symbol) {
-
+    if (symbol === 'c') {
+        buffer = "0";
+        runningTotal = 0;
+    }
 }
 
 function handleNumber(numberString) {
@@ -24,7 +28,6 @@ function handleNumber(numberString) {
     } else {
         buffer += numberString;
     }
-    screen.innerText = buffer;
 }
 
 
